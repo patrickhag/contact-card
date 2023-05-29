@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js"
+      defer
+    ></script>
+    <title>Tix's Webpage</title>
+
+    <style>
+      .dark-theme {
+           background-color: #222;
+           color: #fff;
+         }
+
+         .light-theme {
+           background-color: #f5f5f5;
+           color: #333;
+         }
+         i {
+            font-size: 40px;
+         }
+         .toggle-button {
+              background-color: transparent;
+              border: none;
+              cursor: pointer;
+              font-size: 2rem;
+              outline: none;
+              transition: color 0.3s;
+          }
+          .toggle-button:hover {
+              color: #ff9800; /* Change the color for hover effect */
+          }
+    </style>
+  </head>
+  <body x-data="{ darkTheme: false }">
+    <div
+      class="w3-container w3-center w3-round"
+      style="margin-top: 3%;margin-left: 25%;margin-right: 25%;"
+      :class="{ 'dark-theme': darkTheme, 'light-theme': !darkTheme }"
+    >
+      <h1>Patrick HAG</h1>
+      <p>Software Dev | Web Dev</p>
+      <img
+        src="./Profile.jpg"
+        alt=""
+        class="w3-image w3-circle"
+        width="100px"
+        height="30px"
+      />
+      <div class="w3-margin-top">
+        <a href="https://github.com/patrickhag" class="w3-padding"
+          ><i class="fa fa-github w3-xxlarge"></i
+        ></a>
+        <a href="#" class="w3-padding"
+          ><i class="fa fa-twitter w3-xxlarge"></i
+        ></a>
+        <a href="https://www.instagram.com/patrickhag09/" class="w3-padding"
+          ><i class="fa fa-instagram w3-xxlarge"></i
+        ></a>
+      </div>
+      <p>
+        Welcome to my webpage! I'm an aspiring software developer currently in
+        my senior year of college. I'm passionate about creating innovative
+        solutions and building user-friendly experiences. I specialize in using
+        JavaScript for both frontend and backend development. With a love for
+        problem-solving and a creative mindset, I'm excited to embark on my
+        freelancing journey. I believe in delivering high-quality code that not
+        only meets client expectations but also exceeds them. Whether it's
+        crafting intuitive user interfaces or developing robust server-side
+        functionalities, I'm dedicated to creating impactful solutions. Join me
+        on this exciting adventure as we bring your ideas to life through the
+        power of code. Let's collaborate and build something amazing together!
+      </p>
+    </div>
+    <button @click="darkTheme = !darkTheme" class="toggle-button">
+      <i :class="{'fa fa-moon': darkTheme, 'fa fa-sun': !darkTheme}"></i>
+    </button>
+  </body>
+</html>
